@@ -1,0 +1,11 @@
+[package]
+name = "wren-engine-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+datafusion = {version = "37.1.0"}
+tokio = { version = "1.4.0", features = ["rt", "rt-multi-thread", "macros"] }
+arrow-schema = { version = "51.0.0", default-features = false }
