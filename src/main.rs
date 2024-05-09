@@ -195,6 +195,7 @@ fn generate_model_internal(plan: LogicalPlan) -> Result<Transformed<LogicalPlan>
     match plan {
         LogicalPlan::Extension(extension) => {
             if let Some(_) = extension.node.as_any().downcast_ref::<ModelPlanNode>() {
+                // Just simulate the model generation. In real world, we should generate the model according to MDL.
                 let schema = Schema::new(vec![
                     Field::new("id", DataType::Int32, false),
                     Field::new("first_name", DataType::Utf8, false),
